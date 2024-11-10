@@ -1,65 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f1eb;
-    color: #666;
-    line-height: 1.6;
-    overflow-y: overlay; /* 允許捲軸疊加在內容之上，不佔用寬度 */
-  }
-  nav {
-    font-weight: bold;
+  font-family: Arial, sans-serif;
+  background-color: #f2f1eb;
+  color: #666;
+  line-height: 1.6;
+  overflow-y: scroll;
+}
+nav {
+  font-weight: bold;
+}
+ul {
+  display: flex;
+  justify-content: space-between; /* 讓項目分散排列 */
+  list-style: none;
+  padding-bottom: 20px;
+  margin: 0;
+}
+li {
+  margin-right: 30px;
+}
+.title {
+  /* 把標題項目 (第 6 屆 WeHelp Bootcamp) 放在最左邊 */
+  flex: 1; /* 讓它自動佔用空間 */
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+a:hover {
+  color: #ccccc9;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.slogan {
+  height: 50px;
+  font-family: ‘cwTeXFangSong’, serif;
+  font-size: 20px;
+  color: black;
+}
+.selfie {
+  float: right;
+  height: 283px;
+  padding-left: 25px;
+}
+.inner-block {
+  font-family: Arial, sans-serif;
+}
+h2 {
+  color: black;
+}
+h3 {
+  background-color: #afc8ad;
+  color: black;
+}
+#art {
+  color: #5a6c59;
+  text-decoration: underline;
+}
+
+@media (max-width: 450px) {
+  /*螢幕寬度小於500px, 套用這個區塊的CSS*/
+  /*最小手機螢幕360px*/
+  .slogan {
+    padding-bottom: 60px;
   }
   ul {
     display: flex;
-    justify-content: space-between; /* 讓項目分散排列 */
-    list-style: none;
-    padding-bottom: 20px;
-    margin: 0;
-  }
-  li {
-    margin-right: 30px;
-  }
-  .title {
-    /* 把標題項目 (第 6 屆 WeHelp Bootcamp) 放在最左邊 */
-    flex: 1; /* 讓它自動佔用空間 */
-  }
-  a {
-    text-decoration: none;
-    color: #666;
-  }
-  a:hover {
-    color: #ccccc9;
-  }
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  .slogan {
-    height: 50px;
-    font-family: ‘cwTeXFangSong’, serif;
-    font-size: 20px;
-    color: black;
-  }
-  .selfie {
-    float: right;
-    height: 283px;
-    padding-left: 25px;
-  }
-  .inner-block {
-    font-family: Arial, sans-serif;
-  }
-  h2 {
-    color: black;
-  }
-  h3 {
-    background-color: #afc8ad;
-    color: black;
-  }
-  #art {
-    color: #5a6c59;
+    flex-wrap: wrap;
     text-decoration: underline;
   }
-  
+}
