@@ -67,6 +67,10 @@ h3 {
 @media (max-width: 450px) {
   /*螢幕寬度小於500px, 套用這個區塊的CSS*/
   /*最小手機螢幕360px*/
+  .title {
+    white-space: nowrap;
+    font-size: 25px;
+  }
   .slogan {
     padding-bottom: 60px;
   }
